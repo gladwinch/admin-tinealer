@@ -1,5 +1,5 @@
 <template>
-	<div class="app-bar bg-red-400 dark:bg-black">
+	<div class="app-bar bg-red-400 dark:bg-gray-600">
 		<div>logo</div>
 		<div>
 			<button class="btn border border-white capitalize" @click="changeMode">

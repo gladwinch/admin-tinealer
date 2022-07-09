@@ -13,12 +13,10 @@
 	export default {
 		data: () => ({
 			tabs: [
-				{ name: 'Dashboard', url: '/dashboard' },
-				{ name: 'Relief sound', url: '/library' },
-				{ name: 'TRT training', url: '/training' },
-				{ name: 'Cure research', url: '/research' },
-				{ name: 'Account', url: '/account' },
-				{ name: 'Support', url: '/support' }
+				{ name: 'Dasboard', url: '/' },
+				{ name: 'Library', url: '/library' },
+				{ name: 'Users', url: '/user' },
+				{ name: 'Reports', url: '/report' }
 			]
 		})
 	}

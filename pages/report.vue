@@ -1,12 +1,12 @@
 <template>
-	<div class="bg-indigo-400 p-4">
-		<h1>Support</h1>
+	<div class="bg-green-300 p-4">
+		<h1>Research</h1>
 	</div>
 </template>
 
 <script>
 	export default {
-		name: 'Support',
+		name: 'Report',
 		layout: 'dashboard'
 	}
 </script>

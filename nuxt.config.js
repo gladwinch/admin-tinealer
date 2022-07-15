@@ -3,7 +3,7 @@ require('dotenv').config()
 export default {
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
-		title: 'Admin-tinealer',
+		title: 'Tinealer (admin)',
 		htmlAttrs: {
 			lang: 'en'
 		},
@@ -18,8 +18,8 @@ export default {
 		]
 	},
 
-	nuxt: {
-		port: 3000
+	server: {
+		port: 3001
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
@@ -46,6 +46,7 @@ export default {
 	modules: [
     [ '@nuxtjs/dotenv', { filename: '.env' } ],
 		// https://go.nuxtjs.dev/axios
+		'@nuxtjs/auth-next',
 		'@nuxtjs/axios',
 	],
 
@@ -62,5 +63,50 @@ export default {
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {},
 
-  serverMiddleware: ['~/server/index.js']
+	auth: {
+		redirect: {
+			login: "/login",
+			logout: "/",
+			callback: false,
+			home: "/dashboard"
+		},
+		strategies: {
+			local: false,
+			cookie: {
+				prefix: 'express:sess',
+				user: {
+					property: "data",
+				},
+				endpoints: {
+					login: { url: "/api/auth/login", method: "post" },
+					logout: { url: "/api/auth/logout", method: "get" },
+					user: { url: "/api/user", method: "get" }
+				}
+			}
+		}
+	},
+
+	auth: {
+		strategies: {
+			local: {
+				token: {
+					property: 'token',
+					global: true,
+					// required: true,
+					type: 'Bearer'
+				},
+				user: {
+					property: 'user',
+					// autoFetch: true
+				},
+					endpoints: {
+					login: { url: '/api/auth/login', method: 'post' },
+					logout: { url: '/api/auth/logout', method: 'post' },
+					user: { url: '/api/auth/user', method: 'get' }
+				}
+			}
+		}
+	},
+
+ 	serverMiddleware: ['~/server/index.js']
 }

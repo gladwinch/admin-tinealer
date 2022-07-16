@@ -17,8 +17,8 @@
 			message: null
 		}),
 		async mounted() {
-			const { data } = await this.$axios('/api/hello')
-			this.message = data.message
+			// const { data } = await this.$axios('/api/hello')
+			// this.message = data.message
 		}
 	}
 </script>

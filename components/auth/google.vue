@@ -1,5 +1,5 @@
 <script>
-    import firebase from 'firebase/app'
+    import firebase from 'firebase'
     
     export default {
         methods: {
@@ -27,9 +27,9 @@
 
 <template>
     <div class="social-login" @click="googleSignIn">
-        <img style="height: 1.5rem; width: auto"
+        <!-- <img style="height: 1.5rem; width: auto"
             src="../../assets/icon/social/google.png" alt="google-sign"
-        >
+        > -->
     </div>
 </template>
 
@@ -44,6 +44,7 @@
         border-radius: 6px;
         transition: 0.2s;
     }
+	
     .social-login:hover {
         box-shadow: 0px 5px 10px rgba(0, 19, 159, 0.12);
     }

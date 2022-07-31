@@ -1,25 +1,14 @@
-const asyncHandler = require('../../middleware/async')
+const express = require('express')
+const router = express.Router()
+const { AdminService } = require('./index.js')
 
-// @route    POST api/admin/login
-// @desc     Login admin
-// @access   Public
-exports.login = asyncHandler(async (req, res, next) => {
-    res.status(200).json({ success: true, route: 'login' })
+router.get('/login', async(req, res, next) => {
+    let data = await AdminService.analytics()
+    console.log('the data: ', data)
+    res.send(data)
 })
 
-// @route    GET api/admin/logout
-// @desc     Logout admin
-// @access   Private
-exports.logout = asyncHandler(async (req, res, next) => {
-    res.status(200).json({ success: true, route: 'logout' })
-})
+// router.get('/logout', adminController.logout)
+// router.get('/', adminController.getUser)
 
-// @route    GET api/admin
-// @desc     Get admin
-// @access   Private
-exports.getUser = asyncHandler(async (req, res, next) => {
-    res.status(200).json({ 
-        success: true, 
-        user: { name: 'alex', id: 'sdjknfdskj' } 
-    })
-})
+module.exports = router

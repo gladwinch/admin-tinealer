@@ -1,14 +1,12 @@
 const express = require('express')
-const { connectDB } = require('./config/db')
-
-//connect db
-connectDB()
+const loaders = require('./loaders')
 
 // app configuration
 let app = express()
 
 //app config
 app.use(express.json())
+loaders(app)
 
 // Routers
 app.use(require("./config/path").include(express.Router()))

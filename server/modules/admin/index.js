@@ -1,7 +1,7 @@
-const AdminModel = require('./admin.model')
 const AdminDAL = require('./admin.dal')
-const AdminRouter = require('./admin.router')
+const AdminService = require('./admin.service')
 
-module.exports = {
-    AdminDAL: AdminDAL({ AdminModel })
+module.exports = { 
+    AdminDAL: new AdminDAL(),
+    AdminService: AdminService({ AdminDAL: this.AdminDAL })
 }

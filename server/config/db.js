@@ -10,7 +10,11 @@ const connectDB = async () => {
 }
 
 class DataAccessLayer {
-	
+	constructor() {
+		
+	}
+
+
 }
 
 module.exports = {

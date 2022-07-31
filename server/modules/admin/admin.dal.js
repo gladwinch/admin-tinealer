@@ -1,8 +1,7 @@
-let AdminModel
-
+const AdminModel = require('./admin.model')
 
 class AdminDataAccessLayer {
-    constructor({ markup=false }) {
+    constructor(markup=false) {
         this.model = AdminModel
         this.markup = markup
     }
@@ -28,10 +27,4 @@ class AdminDataAccessLayer {
     }
 }
 
-module.exports = ({ AdminModel }) => {
-    AdminModel = AdminModel
-
-    return {
-        AdminDataAccessLayer
-    }
-  }
+module.exports = AdminDataAccessLayer

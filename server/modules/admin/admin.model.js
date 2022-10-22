@@ -14,10 +14,6 @@ const AdminSchema = new mongoose.Schema({
             'Please add a valid email'
         ]
     },
-    method: {
-        type: String,
-        required: true
-    },
     avatar: {
         type: String,
         default: null

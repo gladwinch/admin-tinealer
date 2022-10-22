@@ -1,0 +1,291 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?zc7xdq');
+  src:  url('fonts/icomoon.eot?zc7xdq#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?zc7xdq') format('truetype'),
+    url('fonts/icomoon.woff?zc7xdq') format('woff'),
+    url('fonts/icomoon.svg?zc7xdq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Eye-off:before {
+  content: "\e91c";
+}
+.icon-Globe:before {
+  content: "\e900";
+}
+.icon-Lock:before {
+  content: "\e901";
+}
+.icon-Scissors:before {
+  content: "\e902";
+}
+.icon-Teleprompter:before {
+  content: "\e903";
+}
+.icon-Transcription-edit:before {
+  content: "\e904";
+}
+.icon-Add-script:before {
+  content: "\e905";
+}
+.icon-Alert:before {
+  content: "\e906";
+}
+.icon-Analytics:before {
+  content: "\e907";
+}
+.icon-Arrow-Left:before {
+  content: "\e908";
+}
+.icon-Arrow-Right:before {
+  content: "\e909";
+}
+.icon-Bin:before {
+  content: "\e90a";
+}
+.icon-Check-circled:before {
+  content: "\e90b";
+}
+.icon-Check:before {
+  content: "\e90c";
+}
+.icon-Chevron-Down:before {
+  content: "\e90d";
+}
+.icon-Chevron-Left:before {
+  content: "\e90e";
+}
+.icon-Chevron-right:before {
+  content: "\e90f";
+}
+.icon-Chevron-up:before {
+  content: "\e910";
+}
+.icon-Clock:before {
+  content: "\e911";
+}
+.icon-Close:before {
+  content: "\e912";
+}
+.icon-Collapse-video:before {
+  content: "\e913";
+}
+.icon-Copy:before {
+  content: "\e914";
+}
+.icon-Download:before {
+  content: "\e915";
+}
+.icon-Dynamic-screen:before {
+  content: "\e916";
+}
+.icon-Dynamic-video:before {
+  content: "\e917";
+}
+.icon-Edit:before {
+  content: "\e918";
+}
+.icon-Elements:before {
+  content: "\e919";
+}
+.icon-Expand-video:before {
+  content: "\e91a";
+}
+.icon-Extension:before {
+  content: "\e91b";
+}
+.icon-Eye:before {
+  content: "\e91d";
+}
+.icon-Fit-screen:before {
+  content: "\e91e";
+}
+.icon-Flip-to-camera:before {
+  content: "\e91f";
+}
+.icon-Flip-to-screen:before {
+  content: "\e920";
+}
+.icon-Google .path1:before {
+  content: "\e921";
+  color: rgb(66, 133, 244);
+}
+.icon-Google .path2:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(52, 168, 83);
+}
+.icon-Google .path3:before {
+  content: "\e923";
+  margin-left: -1em;
+  color: rgb(251, 188, 5);
+}
+.icon-Google .path4:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(234, 67, 53);
+}
+.icon-Heart:before {
+  content: "\e925";
+}
+.icon-Help:before {
+  content: "\e926";
+}
+.icon-Home:before {
+  content: "\e927";
+}
+.icon-Image:before {
+  content: "\e928";
+}
+.icon-Lightning:before {
+  content: "\e929";
+}
+.icon-Link:before {
+  content: "\e92a";
+}
+.icon-Linkedin .path1:before {
+  content: "\e92b";
+  color: rgb(0, 126, 187);
+}
+.icon-Linkedin .path2:before {
+  content: "\e92c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-Loader:before {
+  content: "\e92d";
+}
+.icon-Log-Out:before {
+  content: "\e92e";
+}
+.icon-Mail:before {
+  content: "\e92f";
+}
+.icon-Maximize:before {
+  content: "\e930";
+}
+.icon-Microphone-off:before {
+  content: "\e931";
+}
+.icon-Microphone:before {
+  content: "\e932";
+}
+.icon-More-horizontal:before {
+  content: "\e933";
+}
+.icon-More-vertical:before {
+  content: "\e934";
+}
+.icon-Move-on:before {
+  content: "\e935";
+}
+.icon-Pause:before {
+  content: "\e936";
+}
+.icon-Play:before {
+  content: "\e937";
+}
+.icon-Plus:before {
+  content: "\e938";
+}
+.icon-Re-record:before {
+  content: "\e939";
+}
+.icon-Reset:before {
+  content: "\e93a";
+}
+.icon-Save:before {
+  content: "\e93b";
+}
+.icon-Screen--face-video:before {
+  content: "\e93c";
+}
+.icon-Screen-recording:before {
+  content: "\e93d";
+}
+.icon-Search:before {
+  content: "\e93e";
+}
+.icon-Send:before {
+  content: "\e93f";
+}
+.icon-Settings:before {
+  content: "\e940";
+}
+.icon-Slack .path1:before {
+  content: "\e941";
+  color: rgb(218, 55, 55);
+}
+.icon-Slack .path2:before {
+  content: "\e942";
+  margin-left: -1em;
+  color: rgb(75, 108, 238);
+}
+.icon-Slack .path3:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(0, 199, 132);
+}
+.icon-Slack .path4:before {
+  content: "\e944";
+  margin-left: -1em;
+  color: rgb(237, 171, 0);
+}
+.icon-Static-video:before {
+  content: "\e945";
+}
+.icon-Stop:before {
+  content: "\e946";
+  color: #da3737;
+}
+.icon-Subtitles:before {
+  content: "\e947";
+}
+.icon-Theme:before {
+  content: "\e948";
+}
+.icon-Timer:before {
+  content: "\e949";
+}
+.icon-Type:before {
+  content: "\e94a";
+}
+.icon-Upgrade:before {
+  content: "\e94b";
+}
+.icon-Upload:before {
+  content: "\e94c";
+}
+.icon-User:before {
+  content: "\e94d";
+}
+.icon-Video-recorder:before {
+  content: "\e94e";
+}
+.icon-Video-reel:before {
+  content: "\e94f";
+}
+.icon-Volume-off:before {
+  content: "\e950";
+}
+.icon-Volume-on:before {
+  content: "\e951";
+}

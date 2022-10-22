@@ -1,6 +1,6 @@
 <template>
-	<div class="app-bar bg-white dark:bg-gray-800">
-		<div class="text-black dark:text-white">Tinealer (admin)</div>
+	<div class="app-bar bg-purple dark:bg-gray-800">
+		<div class="text-white dark:text-white">Tinealer (admin)</div>
 		<div>
 			<button class="btn border border-white capitalize" @click="changeMode">
 				Theme {{ btnLabel }}

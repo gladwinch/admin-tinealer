@@ -6,10 +6,41 @@ module.exports = {
 		darkSelector: '.dark-mode',
 		extend: {
 			colors: {
-				primary: {
-					'light': '#fdf0d5',
-					'dark': '#2F2F2F'
-				}
+				'purple': '#8330C2',
+				'purple-hover': '#7226AB',
+				'purple-transculent': '#F3EAF9',
+				'purple-transculent-hover': '#E9DAF3',
+				'purple-background': '#9942DB',
+				'purple-light': '#A66CD1',
+
+				'blue': '#4B6CEE',
+				'blue-background': '#7226AB',
+				'blue-translucent': '#4B6CEE',
+
+				'gray-dark': '#999999',
+				'gray-base': '#CACACA',
+				'gray-border': '#EEEEEE',
+				'grey-light': '#999999',
+
+				'green': '#00C784',
+				'green-hover': '#80E3C2',
+				'green-transculent': '#E6F9F3',
+				'green-dark': '#27A670',
+
+				'orange': '#EDAB00',
+				'orange-hover': '#F6D580',
+				'orange-transculent': '#FDF7E6',
+				'orange-dark': '#E27A3F',
+
+				'red': '#DA3737',
+				'red-hover': '#EC9B9B',
+				'red-transculent': '#F9E0E0',
+				
+				'black': '#000000',
+				'black-overlay': 'rgba(0, 0, 0, 0.8)',
+				'pink': '#D33D6F',
+				'cain': '#2999A8',
+				'white': '#999999',
 			}
 		}
     },

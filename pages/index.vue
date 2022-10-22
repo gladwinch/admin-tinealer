@@ -3,7 +3,7 @@
 		Dashboards
 
 		<div class="bg-yellow-300 p-4">
-			<span v-if="message">{{ message }}</span>
+			<span v-if="message">{{ message }} <span class="icon-Subtitles"></span></span>
 			<span v-else>loading...</span>
 		</div>
 	</div>
@@ -17,8 +17,8 @@
 			message: null
 		}),
 		async mounted() {
-			// const { data } = await this.$axios('/api/hello')
-			// this.message = data.message
+			const { data } = await this.$axios('/api/admin')
+			this.message = data.name
 		}
 	}
 </script>

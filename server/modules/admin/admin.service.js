@@ -1,7 +1,8 @@
 let s3 
 
-const analytics = (User) => async () => {
+const analytics = (AdminDAL) => async () => {
   console.log('analytics running...')
+  AdminDAL.checkModel()
   return 'working!'
 }
 

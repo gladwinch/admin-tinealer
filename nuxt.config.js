@@ -24,6 +24,7 @@ export default {
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	css: [
+		'~/assets/icons/style.css'
 	],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -80,7 +81,7 @@ export default {
 				endpoints: {
 					login: { url: "/api/auth/login", method: "post" },
 					logout: { url: "/api/auth/logout", method: "get" },
-					user: { url: "/api/user", method: "get" }
+					user: { url: "/api/admin", method: "get" }
 				}
 			}
 		}

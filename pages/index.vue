@@ -6,7 +6,7 @@
 			<span v-if="message">{{ message }} <span class="icon-Subtitles"></span></span>
 			<span v-else>loading...</span>
 		</div>
-		<c-text variation="mega-header">mega-header</c-text>
+		<c-text variation="mega-header" color="white" darkColor="red">mega-header</c-text>
 		<c-text variation="header-1">header-1</c-text>
 		<c-text variation="header-2">header-2</c-text>
 		<c-text variation="header-3">header-3</c-text>

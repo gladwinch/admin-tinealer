@@ -40,7 +40,7 @@ module.exports = {
 				'black-overlay': 'rgba(0, 0, 0, 0.8)',
 				'pink': '#D33D6F',
 				'cain': '#2999A8',
-				'white': '#999999',
+				'white': '#FFFFFF',
 			}
 		}
     },

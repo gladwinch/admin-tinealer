@@ -3,7 +3,7 @@
         :is="type"
         data-testid="text"
         :style="{ textAlign }"
-        :class="[variation+'-text', color+'-color']"
+        :class="[variation+'-text', 'text-'+color,'dark:text-'+darkColor]"
     >
         <slot />
     </component>
@@ -27,6 +27,10 @@
             color: {
                 type: String,
                 default: 'black'
+            },
+            darkColor: {
+                type: String,
+                default: 'white'
             },
             variation: {
                 type: String,

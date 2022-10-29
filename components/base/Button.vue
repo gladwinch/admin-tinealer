@@ -11,16 +11,23 @@
             :color="style.color" 
             :darkColor="style.darkcolor"
         >
-            <slot />
+            <span class="button-content">
+                <Icon v-if="icon && orientation==='left'" :icon="icon" :color="style.color" />
+                <slot />
+                <Icon v-if="icon && orientation==='right'" :icon="icon" :color="style.color" />
+            </span>
         </t-text>
     </button>
 </template>
 
 <script>
     import Text from '@/components/base/Text.vue'
+    import Icon from '@/components/base/Icon.vue'
+
     export default {
         components: {
-            't-text': Text
+            't-text': Text,
+            Icon
         },
         props: {
             variation: {
@@ -29,11 +36,15 @@
             },
             custom: {
                 type: Object,
-                default: {}
+                default: null
             },
             orientation: {
                 type: String,
                 default: 'left'
+            },
+            icon: {
+                type: String,
+                default: null
             }
         },
         computed: {
@@ -57,16 +68,16 @@
                         style.background = 'purple-transculent'
                         style.color = 'purple'
                         break
-                    case 'only-icon':
-                        style.background = 'transparent'
-                        style.color = 'purple'
+                    case 'icon-only':
+                        style.background = 'purple'
+                        style.color = 'white'
                         break
                 }
 
-                if(this.custom.background) style.background = this.custom.background
-                if(this.custom.color) style.color = this.custom.color
-                if(this.custom.darkbackground) style.darkbackground = this.custom.darkbackground
-                if(this.custom.darkcolor) style.darkcolor = this.custom.darkcolor
+                // if(this.custom.background) style.background = this.custom.background
+                // if(this.custom.color) style.color = this.custom.color
+                // if(this.custom.darkbackground) style.darkbackground = this.custom.darkbackground
+                // if(this.custom.darkcolor) style.darkcolor = this.custom.darkcolor
 
                 return style
             }
@@ -88,5 +99,15 @@
 
     .outlined-button {
         border: solid 1px black;
+    }
+
+    .icon-only-button {
+        padding: 12px 12px !important;
+    }
+
+    .button-content {
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
 </style>

@@ -37,7 +37,7 @@
                 default: 'text-bold',
                 validator: (value) => {
                     return value.match(
-                        /(mega-header|header-1|header-2|header-3|header-4|large-label|text-bold|label|text-semibold|small-label|text)/
+                        /(mega-header|header-1|header-2|header-3|header-4|large-label|text-bold|label|text-semibold|text-short|small-label|text)/
                     )
                 }
             }
@@ -115,6 +115,14 @@
         font-weight: 600;
         font-size: 14px;
         line-height: 20px;
+        letter-spacing: -0.01em;
+    }
+
+    .text-short-text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
         letter-spacing: -0.01em;
     }
 

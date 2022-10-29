@@ -17,17 +17,24 @@
 		<c-text variation="text-semibold">text-semibold</c-text>
 		<c-text variation="small-label">small-label</c-text>
 		<c-text variation="text">text</c-text>
+		<Button variation="filled">Filled</Button>
+		<Button variation="outlined">Outlined</Button>
+		<Button variation="text">Text</Button>
+		<Button variation="filled-transculent">Filled Transculent</Button>
+		<Button variation="icon-only" icon="heart"></Button>
 	</div>
 </template>
 
 <script>
 	import CText from '~/components/base/Text.vue'
+	import Button from '@/components/base/Button.vue'
 
 	export default {
 		name: 'Dashboard',
 		layout: 'dashboard',
 		components: {
-			CText
+			CText,
+			Button
 		},
 		data: () => ({
 			message: null

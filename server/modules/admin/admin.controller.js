@@ -2,15 +2,29 @@ const express = require('express')
 const router = express.Router()
 const { AdminService } = require('./index.js')
 
-router.get('/', async(req, res, next) => {
-    let admin = {
-        _id: 'someid',
-        name: 'alex zanyar',
-        email: 'alex@gmail.com',
-        position: 'ADMIN'
-    }
+// create admin
+router.post('/create', async(req, res, next) => {
+    try {
+        const _b = req.body
+        // :TODO validation
+        let adminData = await AdminService.create(_b)
 
-    res.send(admin)
+        res.json(adminData)
+    } catch (error) {
+        console.log('ERROR: ', error)
+    }
+})
+
+// get admin
+router.get('/read', async(req, res, next) => {
+    try {
+        const _b = req.query
+       console.log('the query: ', _b)
+        let adminData = await AdminService.read(_b)
+        res.json(adminData)
+    } catch (error) {
+        console.log('ERROR: ', error)
+    }
 })
 
 router.get('/login', async(req, res, next) => {

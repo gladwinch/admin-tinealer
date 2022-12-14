@@ -22,9 +22,9 @@
 	></span>
 	<span
 		v-else
-		:class="`icon-${iconName} ${color}`"
+		:class="`icon-${iconName} text-${color}`"
 		:style="`font-size: ${iconSize}`"
-	></span>
+	></span> 
 </template>
 
 <script>

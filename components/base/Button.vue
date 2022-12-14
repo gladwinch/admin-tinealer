@@ -6,7 +6,7 @@
             'dark:bg-'+style.darkbackground
         ]"
     >
-        <t-text 
+        <PlainText 
             variation="text-short" 
             :color="style.color" 
             :darkColor="style.darkcolor"
@@ -16,17 +16,17 @@
                 <slot />
                 <Icon v-if="icon && orientation==='right'" :icon="icon" :color="style.color" />
             </span>
-        </t-text>
+        </PlainText>
     </button>
 </template>
 
 <script>
-    import Text from '@/components/base/Text.vue'
+    import PlainText from '~/components/base/PlainText.vue'
     import Icon from '@/components/base/Icon.vue'
 
     export default {
         components: {
-            't-text': Text,
+            PlainText,
             Icon
         },
         props: {

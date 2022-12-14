@@ -11,7 +11,7 @@
 
 <script>
     export default {
-        name: 'Text',
+        name: 'TinealerText',
         props: {
             type: {
                 type: String,

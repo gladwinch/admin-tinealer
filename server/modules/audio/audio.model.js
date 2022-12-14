@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const LibrarySchema = new mongoose.Schema({
+const AudioSchema = new mongoose.Schema({
     title: {
         type: String,
         required: [ true, 'Please add a title' ],
@@ -9,10 +9,13 @@ const LibrarySchema = new mongoose.Schema({
         type: String,
         default: null
     },
-    url: {
+    link: {
         type: String,
         unique: true,
-        required: [ true, 'Please add a url' ]
+        required: [ true, 'Please add a link' ]
+    },
+    creator: {
+        type: String
     },
     image: {
         type: String,
@@ -41,4 +44,4 @@ const LibrarySchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Library', LibrarySchema)
+module.exports = mongoose.model('Audio', AudioSchema)

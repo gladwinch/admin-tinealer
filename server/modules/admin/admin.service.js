@@ -9,7 +9,7 @@ const analytics = AdminDAL => async () => {
 const create = AdminDAL => async (payload) => {
   console.log('AdminDAL: ', AdminDAL)
   console.log('payload: ', payload)
-  return await AdminDAL.create({ payload })
+  return await AdminDAL.create(payload)
 }
 
 const read = AdminDAL => async (query) => {

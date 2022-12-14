@@ -1,11 +1,10 @@
-
 // data access layer
 class DataAccessLayer {
-    async create({ payload }) {
+    async create(payload) {
         return await this.model.create(payload)
     }
 
-    async updateById({ id, payload }) {
+    async updateById(id, payload) {
         return await this.model.findOneAndUpdate({ _id: id }, payload, {
             upsert: true,
             new: true
@@ -13,14 +12,14 @@ class DataAccessLayer {
     }
 
     async updateMany({ query, payload }) {
-        return await this.model(query, payload)
+        return await this.model.updateMany(query, payload)
     }
 
-    async read(_query, populate=false) {
+    async read(_query) {
         let query
 
         const reqQuery = { ..._query }
-        const removeFields = ['select', 'sort', 'page', 'limit']
+        const removeFields = ['select', 'sort', 'page', 'limit', 'populate']
 
         removeFields.forEach(param => delete reqQuery[param])
         let queryStr = JSON.stringify(reqQuery)
@@ -49,8 +48,8 @@ class DataAccessLayer {
 
         query = query.skip(startIndex).limit(limit)
 
-        if (populate) {
-            query = query.populate(populate)
+        if (_query.populate) {
+            query = query.populate(_query.populate)
         }
 
         const results = await query
@@ -78,8 +77,16 @@ class DataAccessLayer {
         }
     }
 
-    async remove({ query }) {
-        return await this.model(query, { deleted: true })
+    async remove(id) {
+        return await this.model.findOneAndUpdate(
+            { _id: id }, 
+            { deleted: true }, 
+            { upsert: true, new: true }
+        )
+    }
+
+    async delete(id) {
+        return await this.model.deleteOne({ _id: id })
     }
 }
 
